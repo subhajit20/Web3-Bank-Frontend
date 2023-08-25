@@ -1,0 +1,22 @@
+name: Web3 bank frontend work flow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setting-up-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking version
+        uses: action/checkout@v3
+
+      - name: Checking version
+        uses: action/setup-node@v3
+
+      - name: Installing dependencies
+        run: npm ci
+
+      - name: build the app
+        run: npm test-all
