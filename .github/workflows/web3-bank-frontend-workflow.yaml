@@ -21,4 +21,4 @@ jobs:
         run: npm ci
 
       - name: build the app
-        run: npm test-all
+        run: npm run test-all
