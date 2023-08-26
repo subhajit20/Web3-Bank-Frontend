@@ -5,7 +5,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import type { DrawerProps, RadioChangeEvent } from "antd";
-import { Button, Drawer, Radio, Space } from "antd";
+import { Drawer } from "antd";
 
 interface NavInfo {
   bankName: string;
@@ -39,7 +39,7 @@ function Navbar({ bankName }: NavInfo) {
           </Link>
         </div>
         <div className="navbar-end ">
-          <a className="navbar-item hidden md:block">
+          <a className="navbar-item">
             <ConnectButton
               accountStatus={{
                 smallScreen: "avatar",
@@ -57,7 +57,7 @@ function Navbar({ bankName }: NavInfo) {
             </button>
           </>
         }
-        className="bg-blend-darken"
+        className="bg-slate-600"
         placement={placement}
         closable={false}
         onClose={onClose}
@@ -68,20 +68,18 @@ function Navbar({ bankName }: NavInfo) {
           <Link
             className="menu-item text-lg font-medium text-black hover:text-white"
             href="/login"
+            onClick={onClose}
           >
             Login
           </Link>
           <Link
             className="menu-item text-lg font-medium text-black hover:text-white"
             href="/openaccount"
+            onClick={onClose}
           >
             Open Account
           </Link>
         </ul>
-
-        <div className="">
-          <ConnectButton />
-        </div>
       </Drawer>
     </nav>
   );
