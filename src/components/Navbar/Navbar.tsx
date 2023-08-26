@@ -79,7 +79,7 @@ function Navbar({ bankName }: NavInfo) {
           </Link>
         </ul>
 
-        <div className="block md:hidden">
+        <div className="">
           <ConnectButton />
         </div>
       </Drawer>
