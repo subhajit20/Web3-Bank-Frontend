@@ -16,7 +16,7 @@ function Login() {
         className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
         placeholder="Enter Your Name"
       />
-      <div className="grid grid-cols-2 justify-center max-w-[26rem] gap-x-4 mt-3 place-self-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center  max-w-[15rem] md:max-w-[26rem] gap-x-4 mt-3 place-self-center">
         <button className="btn btn-outline-warning">Login</button>
         <Link href="/openaccount" className="btn btn-outline-error">
           Create New Account
