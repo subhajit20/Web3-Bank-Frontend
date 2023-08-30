@@ -22,6 +22,7 @@ import {
   polygonMumbai,
   bsc,
   mantle,
+  hardhat,
 } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { sepolia } from "viem/chains";
@@ -39,6 +40,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     polygonMumbai,
     bsc,
     mantle,
+    ...(process.env.NODE_ENV === "development" ? [hardhat] : []),
   ],
   [publicProvider()]
 );

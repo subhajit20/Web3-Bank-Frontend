@@ -1,5 +1,4 @@
 "use client";
-import { useAccountModal } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 
 export default function Home() {
