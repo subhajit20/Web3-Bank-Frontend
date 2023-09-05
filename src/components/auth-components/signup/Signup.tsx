@@ -8,6 +8,7 @@ import { AbiItem, isAddress } from "web3-utils";
 import Spinner from "@/components/ui/spinner/Spinner";
 import SuccessAlert from "@/components/ui/alert/SuccessAlert";
 import FailAlert from "@/components/ui/alert/FailAlert";
+import Input from "@/components/ui/inputs/Input";
 
 export default function Signup() {
   const [inputs, setInputs] = useState({
@@ -86,18 +87,23 @@ export default function Signup() {
     <main className="grid grid-cols-1 justify-start place-content-center min-h-screen ">
       <h1 className="place-self-center text-2xl">Open Web3Bank Account</h1>
       <div className="justify-self-center">{alertMsg ? alertMsg : ""}</div>
-      <input
-        name="metamaskAddress"
-        onChange={(e) => handleInput(e)}
-        className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
-        placeholder="Enter Your Wallet Address"
+      <Input
+        _className={
+          "input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
+        }
+        _onChange={(e) => handleInput(e)}
+        _placeholder={"Enter Your web3 Wallet public key"}
+        _type={"text"}
       />
-      <input
-        name="userName"
-        onChange={(e) => handleInput(e)}
-        className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
-        placeholder="Enter Your Name"
+      <Input
+        _className={
+          "input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
+        }
+        _onChange={(e) => handleInput(e)}
+        _placeholder={"Enter Your Name"}
+        _type={"text"}
       />
+
       <div className="grid grid-cols-1 md:grid-cols-2 justify-center  max-w-[15rem] md:max-w-[26rem] gap-x-4 mt-3 place-self-center">
         {loading ? (
           <Spinner />
@@ -109,7 +115,7 @@ export default function Signup() {
             >
               Create Account
             </button>
-            <Link href="/openaccount" className="btn btn-outline-error">
+            <Link href="/login" className="btn btn-outline-error">
               Login
             </Link>
           </React.Fragment>

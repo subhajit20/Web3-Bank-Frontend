@@ -173,6 +173,13 @@ function Navbar({ bankName }: NavInfo) {
           >
             Open Account
           </Link>
+          <Link
+            className="menu-item text-lg font-medium text-black hover:text-white"
+            href="/account"
+            onClick={onClose}
+          >
+            Account
+          </Link>
         </ul>
       </Drawer>
     </nav>

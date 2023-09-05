@@ -1,32 +1,26 @@
 "use client";
 import React from "react";
 import NamePlate1 from "@/components/ui/nameplate/NamePlate";
-import Heading from "../ui/heading/Heading";
+import Link from "next/link";
 
 const Profile = () => {
   return (
-    <main className="grid grid-cols-1 justify-start place-content-center min-h-screen ">
-      <Heading text={"My Profile"} size={"text-4xl text-center"} />
-      <div className="justify-self-center">
-        <div className="grid grid-cols-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-10 h-10"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-          <div className="justify-self-start w-full">
-            <NamePlate1 _type="text" _text={"Heloo"} _placeholder="Your Name" />
-          </div>
-        </div>
+    <main className="grid grid-cols-1 justify-start place-content-center min-h-screen gap-y-2">
+      <h1 className="place-self-center text-2xl">My Profile</h1>
+      <input
+        className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
+        placeholder="Account Hash"
+      />
+      <input
+        className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
+        placeholder="Enter Your Name"
+      />
+      <input
+        className="input-ghost-secondary input mt-10 max-w-[15rem] md:max-w-[26rem] place-self-center"
+        placeholder="Total Balance"
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 justify-center  max-w-[20rem] md:max-w-[26rem] gap-x-4 mt-3 place-self-center">
+        <button className="btn btn-outline-warning">Save Changes</button>
       </div>
     </main>
   );
