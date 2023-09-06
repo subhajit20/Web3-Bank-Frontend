@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { Input } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import Link from "next/link";
 
 function Login() {

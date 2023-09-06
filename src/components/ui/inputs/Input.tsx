@@ -2,10 +2,10 @@
 import React, { ChangeEvent } from "react";
 
 interface InputsProps {
-  _type: string;
-  _placeholder: string;
-  _className: string;
-  _onChange: (e: any) => void;
+  _type?: string;
+  _placeholder?: string;
+  _className?: string;
+  _onChange?: (e: any) => void;
 }
 const Input = (props: InputsProps) => {
   return (

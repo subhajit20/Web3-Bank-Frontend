@@ -180,6 +180,13 @@ function Navbar({ bankName }: NavInfo) {
           >
             Account
           </Link>
+          <Link
+            className="menu-item text-lg font-medium text-black hover:text-white"
+            href="/transfer"
+            onClick={onClose}
+          >
+            Transfer
+          </Link>
         </ul>
       </Drawer>
     </nav>
